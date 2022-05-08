@@ -14,18 +14,22 @@ namespace remiel
         [SerializeField, Header("腳色方向圖示")] private Transform traDirectionIcon;
         [SerializeField, Header("腳色方向圖示範圍"), Range(0, 5)] private float rangeOirectionIcon = 2.5f;
         [SerializeField, Header("角色旋轉速度"), Range(0, 100)] private float speedTurn = 1.5f;
+        [SerializeField, Header("動畫參數走路")] private string parameterWalk;
 
         private Rigidbody rigidBody;
+        private Animator animator;
 
         private void Awake()
         {
             rigidBody = GetComponent<Rigidbody>();
+            animator = GetComponent<Animator>();
         }
 
         private void Update()
         {
-            LookDirectionIcon();
+            LookDirectionIconpPos();
             UpdateDirectionPos();
+            UpdateAnimation();
         }
 
         private void FixedUpdate()
@@ -54,14 +58,21 @@ namespace remiel
             traDirectionIcon.position = pos;
         }
 
-        private void LookDirectionIcon()
+        private void LookDirectionIconpPos()
         {
             // 取得面相角度資訊 = 四位元.面相角度(方向圖示 - 角色) - 方向圖示與角色的向量
             Quaternion look = Quaternion.LookRotation(traDirectionIcon.position - transform.position);
             // 角色的角度 = 四位元.插值(角色的角度.電像角度. 旋轉速度 * 一幀的時間)
             transform.rotation = Quaternion.Lerp(transform.rotation, look, speedTurn * Time.deltaTime);
-            //角色的歐拉角度 = 三維向量(0, 原本的歐拉角度y , 0)
+            //角色的歐拉角度 = 三維向量(0, 原本的歐拉角度y , 0)nh
             transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
+        }
+
+        private void UpdateAnimation()
+        {
+            // 是否跑步 = 虛擬搖桿.水平.不為零 或 垂直 不為零
+            bool run = joystick.Horizontal != 0 || joystick.Vertical != 0;
+            animator.SetBool(parameterWalk, run);
         }
     }
 }
