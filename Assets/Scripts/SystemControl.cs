@@ -27,7 +27,7 @@ namespace remiel
 
         private void Update()
         {
-            LookDirectionIconpPos();
+            LookDirectionIconPos();
             UpdateDirectionPos();
             UpdateAnimation();
         }
@@ -37,7 +37,7 @@ namespace remiel
             Move();
             GetJoystickValue();
         }
-
+            
         private void GetJoystickValue()
         {
             print("<color=yellow>水平:" + joystick.Horizontal + "</color>");
@@ -58,7 +58,7 @@ namespace remiel
             traDirectionIcon.position = pos;
         }
 
-        private void LookDirectionIconpPos()
+        private void LookDirectionIconPos()
         {
             // 取得面相角度資訊 = 四位元.面相角度(方向圖示 - 角色) - 方向圖示與角色的向量
             Quaternion look = Quaternion.LookRotation(traDirectionIcon.position - transform.position);
