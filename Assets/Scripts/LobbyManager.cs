@@ -21,6 +21,8 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     //喚醒事件:撥放遊戲時執行一次，初始化設定
     private void Awake()
     {
+        // 螢幕.設定解析度(長,寬,是否全螢幕)
+        Screen.SetResolution(1024, 576, false);
         //連線的使用設定   
         PhotonNetwork.ConnectUsingSettings();
     }
@@ -86,5 +88,19 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         int maxCount = PhotonNetwork.CurrentRoom.MaxPlayers;
 
         textCountPlayer.text = "連線人數" + currrentCount + " / " + maxCount;
+
+    }
+
+    /// <summary>
+    /// 載入玩家場景
+    /// </summary>
+    private void LoadGameSence(int currrentCount, int maxCount)
+    {
+        if (currrentCount == maxCount)
+        {
+            // 透過Photom連線玩家 載入指定場景 "遊戲場景"
+            // 場景必須放在Build setting裡
+            PhotonNetwork.LoadLevel("遊戲場景");
+        }
     }
 }

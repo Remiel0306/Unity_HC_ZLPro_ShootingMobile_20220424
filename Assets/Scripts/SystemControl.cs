@@ -1,3 +1,4 @@
+using Photon.Pun;
 using UnityEngine;
 
 //命名空間
@@ -7,14 +8,18 @@ namespace remiel
     /// 控制系統:荒野亂鬥移動功能
     /// 虛擬搖桿控制角色移動
     /// </summary>
-    public class SystemControl : MonoBehaviour
+    public class SystemControl : MonoBehaviourPun
     {
         [SerializeField, Header("虛擬搖桿")] private Joystick joystick;
         [SerializeField, Header("移動速度"), Range(0, 300)] private float speed = 3.5f;
-        [SerializeField, Header("腳色方向圖示")] private Transform traDirectionIcon;
-        [SerializeField, Header("腳色方向圖示範圍"), Range(0, 5)] private float rangeOirectionIcon = 2.5f;
+        [SerializeField, Header("角色方向圖示")] private Transform traDirectionIcon;
+        [SerializeField, Header("角色方向圖示範圍"), Range(0, 5)] private float rangeOirectionIcon = 2.5f;
         [SerializeField, Header("角色旋轉速度"), Range(0, 100)] private float speedTurn = 1.5f;
         [SerializeField, Header("動畫參數走路")] private string parameterWalk;
+        [SerializeField, Header("畫布")] private GameObject goCanvas;
+        [SerializeField, Header("畫布玩家資訊")] private GameObject goCanvasPlayerInfo;
+        [SerializeField, Header("角色方向圖示")] private GameObject goDirection;
+
 
         private Rigidbody rigidBody;
         private Animator animator;
@@ -23,6 +28,13 @@ namespace remiel
         {
             rigidBody = GetComponent<Rigidbody>();
             animator = GetComponent<Animator>();
+
+            if (photonView.IsMine)
+            {
+                Instantiate(goCanvas);
+                Instantiate(goCanvasPlayerInfo);
+                Instantiate(goDirection);
+            }
         }
 
         private void Update()
