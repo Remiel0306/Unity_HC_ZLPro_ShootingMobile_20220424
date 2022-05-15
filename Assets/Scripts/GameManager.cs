@@ -27,13 +27,13 @@ namespace remiel
             // 如果是連線進入的玩家就在伺服器生成及色物件
             //if (photonView.IsMine) 
             //{
-            //    int indexRandom = Random.Range(0, traSpawmPointList.Count); // 取得隨機清單(0, 清單的長度)
-            //    Transform tra = traSpawmPointList[indexRandom];             // 取的隨機座標
+                int indexRandom = Random.Range(0, traSpawmPointList.Count); // 取得隨機清單(0, 清單的長度)
+                Transform tra = traSpawmPointList[indexRandom];             // 取的隨機座標
 
-            //    // Photon 伺服器進行生成(物件.名稱,座標,角度);
-            //    PhotonNetwork.Instantiate(goCharacter.name, Vector3.zero, Quaternion.identity);
+                // Photon 伺服器進行生成(物件.名稱,座標,角度);
+                PhotonNetwork.Instantiate(goCharacter.name, Vector3.zero, Quaternion.identity);
 
-            //    traSpawmPointList.RemoveAt(indexRandom);   // 刪除已經取得過的生成座標資料
+                traSpawmPointList.RemoveAt(indexRandom);   // 刪除已經取得過的生成座標資料
             //}
 		}
 	}

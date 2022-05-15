@@ -488,7 +488,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 65, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.02, y: 3.12}
+  m_AnchoredPosition: {x: 0.019989014, y: 3.119995}
   m_SizeDelta: {x: 800, y: 491.9302}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &88861819526198509
@@ -534,7 +534,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &88861819526198515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -565,6 +565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   v3Offset: {x: 0, y: 3, z: 1}
+  traPlayer: {fileID: 0}
 --- !u!1 &88861819836746662
 GameObject:
   m_ObjectHideFlags: 0

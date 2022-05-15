@@ -44,11 +44,10 @@ namespace remiel
                 Instantiate(goCanvasPlayerInfo);
 
                 GameObject tempCavans = Instantiate(goCanvas);
-                joystick = tempCavans.transform.Find("Dynamic joystick").GetComponent<Joystick>(); // 取得畫布內的虛擬搖桿             
+                joystick = tempCavans.transform.Find("Floating Joystick").GetComponent<Joystick>(); // 取得畫布內的虛擬搖桿             
                 systemAttack.btnFire = tempCavans.transform.Find("發射").GetComponent<Button>();
 
-
-                cvc = GameObject.Find("CM 管理器").GetComponent<CinemachineVirtualCamera>();
+                cvc = GameObject.Find("CM管理器").GetComponent<CinemachineVirtualCamera>();
                 cvc.Follow = transform;
             }
             else 

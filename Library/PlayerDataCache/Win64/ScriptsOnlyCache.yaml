@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - FloatingJoystick
     - LobbyManager
+    - remiel.AdsManager
     - remiel.GameManager
     - remiel.PlayerUIFollow
     - remiel.SystemAttack
@@ -132,8 +133,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
     - Class: 91
@@ -145,45 +144,45 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1556}
+      Script: {instanceID: 1586}
     - Class: 114
-      Script: {instanceID: 2692}
+      Script: {instanceID: 2760}
     - Class: 114
-      Script: {instanceID: 2766}
+      Script: {instanceID: 2834}
     - Class: 114
-      Script: {instanceID: 2848}
+      Script: {instanceID: 2920}
     - Class: 114
-      Script: {instanceID: 3000}
+      Script: {instanceID: 3076}
     - Class: 114
-      Script: {instanceID: 3224}
+      Script: {instanceID: 3304}
     - Class: 114
-      Script: {instanceID: 3318}
+      Script: {instanceID: 3406}
     - Class: 114
-      Script: {instanceID: 3772}
+      Script: {instanceID: 3872}
     - Class: 114
-      Script: {instanceID: 5570}
+      Script: {instanceID: 5702}
     - Class: 114
-      Script: {instanceID: 5802}
+      Script: {instanceID: 5946}
     - Class: 114
-      Script: {instanceID: 6170}
+      Script: {instanceID: 6324}
     - Class: 114
-      Script: {instanceID: 6208}
+      Script: {instanceID: 6364}
     - Class: 114
-      Script: {instanceID: 6218}
+      Script: {instanceID: 6374}
     - Class: 114
-      Script: {instanceID: 6382}
+      Script: {instanceID: 6544}
     - Class: 114
-      Script: {instanceID: 6724}
+      Script: {instanceID: 6892}
     - Class: 114
-      Script: {instanceID: 6732}
+      Script: {instanceID: 6900}
     - Class: 114
-      Script: {instanceID: 7380}
+      Script: {instanceID: 7568}
     - Class: 114
-      Script: {instanceID: 7546}
+      Script: {instanceID: 7746}
     - Class: 114
-      Script: {instanceID: 7916}
+      Script: {instanceID: 8126}
     - Class: 114
-      Script: {instanceID: 8098}
+      Script: {instanceID: 8310}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 134
@@ -237,6 +236,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
     - Class: 91
@@ -248,73 +249,75 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1554}
+      Script: {instanceID: 1584}
     - Class: 114
-      Script: {instanceID: 1556}
+      Script: {instanceID: 1586}
     - Class: 114
-      Script: {instanceID: 1652}
+      Script: {instanceID: 1684}
     - Class: 114
-      Script: {instanceID: 1836}
+      Script: {instanceID: 1876}
     - Class: 114
-      Script: {instanceID: 2288}
+      Script: {instanceID: 2342}
     - Class: 114
-      Script: {instanceID: 2304}
+      Script: {instanceID: 2358}
     - Class: 114
-      Script: {instanceID: 2766}
+      Script: {instanceID: 2738}
     - Class: 114
-      Script: {instanceID: 3000}
+      Script: {instanceID: 2834}
     - Class: 114
-      Script: {instanceID: 3224}
+      Script: {instanceID: 3076}
     - Class: 114
-      Script: {instanceID: 3318}
+      Script: {instanceID: 3304}
     - Class: 114
-      Script: {instanceID: 4130}
+      Script: {instanceID: 3406}
     - Class: 114
-      Script: {instanceID: 4132}
+      Script: {instanceID: 4242}
     - Class: 114
-      Script: {instanceID: 4314}
+      Script: {instanceID: 4244}
     - Class: 114
-      Script: {instanceID: 4464}
+      Script: {instanceID: 4430}
     - Class: 114
-      Script: {instanceID: 4754}
+      Script: {instanceID: 4582}
     - Class: 114
-      Script: {instanceID: 5482}
+      Script: {instanceID: 4880}
     - Class: 114
-      Script: {instanceID: 5508}
+      Script: {instanceID: 5612}
     - Class: 114
-      Script: {instanceID: 5570}
+      Script: {instanceID: 5640}
     - Class: 114
-      Script: {instanceID: 5950}
+      Script: {instanceID: 5702}
     - Class: 114
-      Script: {instanceID: 5994}
+      Script: {instanceID: 6102}
     - Class: 114
-      Script: {instanceID: 6208}
+      Script: {instanceID: 6146}
     - Class: 114
-      Script: {instanceID: 6218}
+      Script: {instanceID: 6364}
     - Class: 114
-      Script: {instanceID: 6382}
+      Script: {instanceID: 6374}
     - Class: 114
-      Script: {instanceID: 6724}
+      Script: {instanceID: 6544}
     - Class: 114
-      Script: {instanceID: 6732}
+      Script: {instanceID: 6892}
     - Class: 114
-      Script: {instanceID: 7098}
+      Script: {instanceID: 6900}
     - Class: 114
-      Script: {instanceID: 7372}
+      Script: {instanceID: 7276}
     - Class: 114
-      Script: {instanceID: 7380}
+      Script: {instanceID: 7560}
     - Class: 114
-      Script: {instanceID: 7546}
+      Script: {instanceID: 7568}
     - Class: 114
-      Script: {instanceID: 7916}
+      Script: {instanceID: 7746}
     - Class: 114
-      Script: {instanceID: 8098}
+      Script: {instanceID: 8126}
     - Class: 114
-      Script: {instanceID: 8322}
+      Script: {instanceID: 8310}
     - Class: 114
-      Script: {instanceID: 8456}
+      Script: {instanceID: 8546}
     - Class: 114
-      Script: {instanceID: 8788}
+      Script: {instanceID: 8684}
+    - Class: 114
+      Script: {instanceID: 9022}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -652,6 +655,12 @@ ScriptsOnlyBuild:
     className: CurrentRoomPropertiesListedInLobbyProperty
   - hash:
       serializedVersion: 2
+      Hash: ef5eac1ed0eaa62ffd4073eca6a3d23c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: remiel
+    className: AdsManager
+  - hash:
+      serializedVersion: 2
       Hash: 4a03f6b1ff196600b4f44591c20b6e2b
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -734,6 +743,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
     className: OnEscapeQuit
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements
+    className: Placeholder
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -968,6 +983,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: 88e2c6f501bf5dead831a3e44c30de40
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Platform.Editor
+    className: BannerPlaceholder
   - hash:
       serializedVersion: 2
       Hash: 632731657c90f101a2dca0a2b7a6245c
@@ -1654,6 +1675,12 @@ ScriptsOnlyBuild:
     className: PlayerListCell
   - hash:
       serializedVersion: 2
+      Hash: a325152ad9563ed900af221c132fea36
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Utilities
+    className: CoroutineExecutor
+  - hash:
+      serializedVersion: 2
       Hash: f941c3a384168571b7d90f58ec4986bc
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1892,6 +1919,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: SendRateOnSerializeField
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Utilities
+    className: ApplicationQuit
   - hash:
       serializedVersion: 2
       Hash: d227987243593b32ae57394d06018643
@@ -2376,4 +2409,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - "Assets/\u5834\u666F/\u904A\u6232\u5927\u5EF3.unity"
   - "Assets/\u5834\u666F/\u904A\u6232\u5834\u666F.unity"
-  playerPath: "C:/Users/Appedu/Desktop/\u767C\u5E03\u6E2C\u8A66/\u7B2C5\u7248/ShootingMobile_20220424.exe"
+  playerPath: "C:/Users/Appedu/Desktop/\u767C\u5E03\u6E2C\u8A66/\u7B2C6\u7248/ShootingMobile_20220424.exe"
