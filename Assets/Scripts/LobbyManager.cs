@@ -66,7 +66,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         print("<color=red>4. 加入隨機房間失敗</color>");
 
         RoomOptions ro = new RoomOptions(); //新增房間設定物件
-        ro.MaxPlayers = 5;                  //指定房間最大人數
+        ro.MaxPlayers = 2;                  //指定房間最大人數
         PhotonNetwork.CreateRoom("", ro);   //建立房間並給予房間物件
     }
 
@@ -78,6 +78,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         int maxCount = PhotonNetwork.CurrentRoom.MaxPlayers;
 
         textCountPlayer.text = "連線人數" + currrentCount + " / " + maxCount;
+        LoadGameSence(currrentCount, maxCount);
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
@@ -88,7 +89,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         int maxCount = PhotonNetwork.CurrentRoom.MaxPlayers;
 
         textCountPlayer.text = "連線人數" + currrentCount + " / " + maxCount;
-
+        LoadGameSence(currrentCount, maxCount);
     }
 
     /// <summary>

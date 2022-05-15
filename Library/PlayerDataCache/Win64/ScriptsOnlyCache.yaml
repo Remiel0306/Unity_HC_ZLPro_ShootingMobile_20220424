@@ -38,13 +38,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -162,29 +155,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3000}
     - Class: 114
+      Script: {instanceID: 3224}
+    - Class: 114
       Script: {instanceID: 3318}
     - Class: 114
       Script: {instanceID: 3772}
     - Class: 114
       Script: {instanceID: 5570}
     - Class: 114
-      Script: {instanceID: 6168}
+      Script: {instanceID: 5802}
     - Class: 114
-      Script: {instanceID: 6206}
+      Script: {instanceID: 6170}
     - Class: 114
-      Script: {instanceID: 6216}
+      Script: {instanceID: 6208}
     - Class: 114
-      Script: {instanceID: 6380}
+      Script: {instanceID: 6218}
     - Class: 114
-      Script: {instanceID: 6722}
+      Script: {instanceID: 6382}
     - Class: 114
-      Script: {instanceID: 7378}
+      Script: {instanceID: 6724}
     - Class: 114
-      Script: {instanceID: 7544}
+      Script: {instanceID: 6732}
     - Class: 114
-      Script: {instanceID: 8096}
+      Script: {instanceID: 7380}
     - Class: 114
-      Script: {instanceID: 46098}
+      Script: {instanceID: 7546}
+    - Class: 114
+      Script: {instanceID: 7916}
+    - Class: 114
+      Script: {instanceID: 8098}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 134
@@ -285,31 +284,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5570}
     - Class: 114
-      Script: {instanceID: 5948}
+      Script: {instanceID: 5950}
     - Class: 114
-      Script: {instanceID: 5992}
+      Script: {instanceID: 5994}
     - Class: 114
-      Script: {instanceID: 6206}
+      Script: {instanceID: 6208}
     - Class: 114
-      Script: {instanceID: 6216}
+      Script: {instanceID: 6218}
     - Class: 114
-      Script: {instanceID: 6722}
+      Script: {instanceID: 6382}
     - Class: 114
-      Script: {instanceID: 6730}
+      Script: {instanceID: 6724}
     - Class: 114
-      Script: {instanceID: 7096}
+      Script: {instanceID: 6732}
     - Class: 114
-      Script: {instanceID: 7370}
+      Script: {instanceID: 7098}
     - Class: 114
-      Script: {instanceID: 7914}
+      Script: {instanceID: 7372}
     - Class: 114
-      Script: {instanceID: 8096}
+      Script: {instanceID: 7380}
     - Class: 114
-      Script: {instanceID: 8320}
+      Script: {instanceID: 7546}
     - Class: 114
-      Script: {instanceID: 8454}
+      Script: {instanceID: 7916}
     - Class: 114
-      Script: {instanceID: 8786}
+      Script: {instanceID: 8098}
+    - Class: 114
+      Script: {instanceID: 8322}
+    - Class: 114
+      Script: {instanceID: 8456}
+    - Class: 114
+      Script: {instanceID: 8788}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -331,6 +336,8 @@ ScriptsOnlyBuild:
     - Class: 198
       Script: {instanceID: 0}
     - Class: 199
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -1551,6 +1558,12 @@ ScriptsOnlyBuild:
     className: CinemachineDollyCart
   - hash:
       serializedVersion: 2
+      Hash: 6a2370d6a4f7645bd1900aa45bfe00de
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: remiel
+    className: GameManager
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1929,7 +1942,7 @@ ScriptsOnlyBuild:
     className: Asteroid
   - hash:
       serializedVersion: 2
-      Hash: 4fdef7fc88d252d39c64b801ff322050
+      Hash: 6de68b525f04e5d3bc072ce98ee5961d
     assemblyName: Assembly-CSharp.dll
     namespaceName: remiel
     className: PlayerUIFollow
@@ -2163,7 +2176,7 @@ ScriptsOnlyBuild:
     className: ConnectionHandler
   - hash:
       serializedVersion: 2
-      Hash: d67635ee54661265ffbaea2fbcd17b4c
+      Hash: 843930bde7537038e9636f4d54a92d73
     assemblyName: Assembly-CSharp.dll
     namespaceName: remiel
     className: SystemControl
@@ -2359,14 +2372,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 480ae33955f084c66cfefc0bd35598b8
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: remiel
-    className: GameManager
   platform: 19
   scenePathNames:
   - "Assets/\u5834\u666F/\u904A\u6232\u5927\u5EF3.unity"
   - "Assets/\u5834\u666F/\u904A\u6232\u5834\u666F.unity"
-  playerPath: "C:/Users/Appedu/Desktop/\u767C\u5E03\u6E2C\u8A66/\u7B2C2\u7248/ShootingMobile_20220424.exe"
+  playerPath: "C:/Users/Appedu/Desktop/\u767C\u5E03\u6E2C\u8A66/\u7B2C5\u7248/ShootingMobile_20220424.exe"

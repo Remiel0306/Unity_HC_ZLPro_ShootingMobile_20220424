@@ -11,7 +11,7 @@ namespace remiel
     /// </summary>
     public class SystemAttack : MonoBehaviour
     {
-        [SerializeField, Header("發射")] private Button btnFire;
+        [SerializeField] public Button btnFire; 
         [SerializeField, Header("子彈")] private GameObject goBullet;
         [SerializeField, Header("數量")] private int bulletCountMax = 3;
         [SerializeField, Header("子彈發射位置")] private Transform traFire;

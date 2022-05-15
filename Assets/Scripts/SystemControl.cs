@@ -1,5 +1,7 @@
+using Cinemachine;
 using Photon.Pun;
 using UnityEngine;
+using UnityEngine.UI;
 
 //命名空間
 namespace remiel
@@ -10,9 +12,7 @@ namespace remiel
     /// </summary>
     public class SystemControl : MonoBehaviourPun
     {
-        [SerializeField, Header("虛擬搖桿")] private Joystick joystick;
         [SerializeField, Header("移動速度"), Range(0, 300)] private float speed = 3.5f;
-        [SerializeField, Header("角色方向圖示")] private Transform traDirectionIcon;
         [SerializeField, Header("角色方向圖示範圍"), Range(0, 5)] private float rangeOirectionIcon = 2.5f;
         [SerializeField, Header("角色旋轉速度"), Range(0, 100)] private float speedTurn = 1.5f;
         [SerializeField, Header("動畫參數走路")] private string parameterWalk;
@@ -23,17 +23,37 @@ namespace remiel
 
         private Rigidbody rigidBody;
         private Animator animator;
+        private Joystick joystick;
+        private Transform traDirectionIcon;
+        private CinemachineVirtualCamera cvc;
+        private SystemAttack systemAttack;
+
 
         private void Awake()
         {
             rigidBody = GetComponent<Rigidbody>();
             animator = GetComponent<Animator>();
+            systemAttack = GetComponent<SystemAttack>();
 
             if (photonView.IsMine)
             {
-                Instantiate(goCanvas);
+                PlayerUIFollow follow = Instantiate(goCanvasPlayerInfo).GetComponent<PlayerUIFollow>();
+                follow.traPlayer = transform;
+
+                traDirectionIcon = Instantiate(goDirection).transform; // 取得角色方向圖示
                 Instantiate(goCanvasPlayerInfo);
-                Instantiate(goDirection);
+
+                GameObject tempCavans = Instantiate(goCanvas);
+                joystick = tempCavans.transform.Find("Dynamic joystick").GetComponent<Joystick>(); // 取得畫布內的虛擬搖桿             
+                systemAttack.btnFire = tempCavans.transform.Find("發射").GetComponent<Button>();
+
+
+                cvc = GameObject.Find("CM 管理器").GetComponent<CinemachineVirtualCamera>();
+                cvc.Follow = transform;
+            }
+            else 
+            {
+                enabled = false;
             }
         }
 
